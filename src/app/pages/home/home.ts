@@ -135,6 +135,24 @@ export class Home implements AfterViewInit, OnDestroy {
       tone: '#EAF8FE',
     },
     {
+      name: 'Flutter',
+      blurb: 'Cross-platform apps',
+      icon: 'assets/tech/flutter.svg',
+      tone: '#E8F4FC',
+    },
+    {
+      name: 'Android',
+      blurb: 'Native mobile apps',
+      icon: 'assets/tech/android.svg',
+      tone: '#EAF8F0',
+    },
+    {
+      name: 'iOS',
+      blurb: 'Native Apple apps',
+      icon: 'assets/tech/ios.svg',
+      tone: '#F0F0F0',
+    },
+    {
       name: 'Node.js',
       blurb: 'APIs & services',
       icon: 'assets/tech/nodejs.svg',
