@@ -89,7 +89,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem 1.25rem;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   font-size: 0.84rem;
   color: color-mix(in srgb, white 48%, transparent);
 }

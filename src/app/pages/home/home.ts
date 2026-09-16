@@ -31,6 +31,13 @@ interface TechItem {
   tone: string;
 }
 
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  featured?: boolean;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -238,6 +245,40 @@ export class Home implements AfterViewInit, OnDestroy {
       role: 'Senior Developer',
       image: 'assets/team/akil-makhani.png',
       linkedin: 'https://www.linkedin.com/in/akil-makhani-974a6a153/',
+    },
+  ];
+
+  readonly testimonials: Testimonial[] = [
+    {
+      quote:
+        'I wanted to touch base and say that I appreciate all the hard work you do. The last several months have been a bit all over the place, but you’re an integral part of what we’re building — and when we become a household name, a big piece of that will be your contribution to our tech and development. The next few months will be big for us, and the higher we go in the market, the more validation we get for what we’re doing.',
+      name: 'Kyle Kirby',
+      role: 'CEO, Kinnect',
+      featured: true,
+    },
+    {
+      quote:
+        'Samir has done a great job for WhyDonate as a front-end developer. He worked on our Angular UI for more than a year — very friendly, and a pleasure to collaborate with.',
+      name: 'Niels Corver',
+      role: 'CEO, WhyDonate',
+    },
+    {
+      quote:
+        'They provided a full-stack team for our SaaS product — web, mobile, and Shopify integrations — using React, .NET, and Flutter. Solid delivery end to end.',
+      name: 'Grant Everiss',
+      role: 'Director, Courierit',
+    },
+    {
+      quote:
+        'Samir and his team have amazing front-end skills. He’s an expert in REST API integration and Angular, and on top of that he’s friendly and easygoing. Happy with the work.',
+      name: 'HarryTech',
+      role: 'Client',
+    },
+    {
+      quote:
+        'Reached out for responsive fixes. Timely, skilled at resolving layout issues — I’ll reach out again when needed.',
+      name: 'Venkat K',
+      role: 'Client',
     },
   ];
 

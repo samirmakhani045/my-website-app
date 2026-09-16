@@ -249,6 +249,35 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section id="clients" class="kx-section testimonials">
+    <div class="kx-container">
+      <div class="section-head kx-reveal">
+        <p class="kx-eyebrow">Client voices</p>
+        <h2>What our clients say.</h2>
+        <p>
+          Long-term partnerships and product delivery — in their own words.
+        </p>
+      </div>
+
+      <div class="testimonials__grid">
+        @for (item of testimonials; track item.name; let i = $index) {
+          <blockquote
+            class="quote kx-reveal"
+            [class.quote--featured]="item.featured"
+            [style.--d]="i * 70 + 'ms'"
+          >
+            <p>{{ item.quote }}</p>
+            <footer>
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.role }}</span>
+            </footer>
+          </blockquote>
+        }
+      </div>
+    </div>
+  </section>
+
   <!-- TEAM -->
   <section id="team" class="kx-section team">
     <div class="kx-container">

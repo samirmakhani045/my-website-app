@@ -14,6 +14,7 @@ export class SiteHeader {
     { label: 'Services', href: '#services' },
     { label: 'How we work', href: '#model' },
     { label: 'Work', href: '#portfolio' },
+    { label: 'Clients', href: '#clients' },
     { label: 'Team', href: '#team' },
     { label: 'Contact', href: '#contact' },
   ];
