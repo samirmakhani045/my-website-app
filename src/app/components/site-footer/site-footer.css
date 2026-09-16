@@ -1,0 +1,102 @@
+:host {
+  display: block;
+}
+
+.site-footer {
+  background: #07161f;
+  color: color-mix(in srgb, white 78%, transparent);
+  padding-block: 3.25rem 1.35rem;
+}
+
+.site-footer__top {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid color-mix(in srgb, white 10%, transparent);
+}
+
+.site-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.site-footer__logo img {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.55rem;
+  object-fit: cover;
+}
+
+.site-footer__logo span {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.site-footer__brand p {
+  margin: 0;
+  max-width: 28rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, white 62%, transparent);
+  font-size: 0.98rem;
+}
+
+.site-footer__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.site-footer h3 {
+  margin: 0 0 0.85rem;
+  color: white;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-footer a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: color-mix(in srgb, white 70%, transparent);
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  color: var(--kx-mint);
+}
+
+.site-footer__note {
+  display: block;
+  margin: -0.15rem 0 0.7rem;
+  font-size: 0.82rem;
+  color: color-mix(in srgb, white 48%, transparent);
+}
+
+.site-footer__address {
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, white 55%, transparent);
+}
+
+.site-footer__bottom {
+  padding-top: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  color: color-mix(in srgb, white 48%, transparent);
+}
+
+@media (min-width: 860px) {
+  .site-footer__top {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+}

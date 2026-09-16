@@ -1,0 +1,37 @@
+<header class="site-header" [class.is-scrolled]="scrolled()">
+  <div class="kx-container site-header__inner">
+    <a class="site-header__brand" href="#top" (click)="closeMenu()" aria-label="Kynexa Technologies home">
+      <img src="assets/brand/kynexa-logo.svg" alt="Kynexa Technologies" width="160" height="38" />
+    </a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      @for (link of links; track link.href) {
+        <a [href]="link.href">{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="kx-btn kx-btn-primary site-header__cta" href="#contact">Start a project</a>
+      <button
+        class="site-header__burger"
+        type="button"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="mobile-nav"
+        aria-label="Toggle menu"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  @if (menuOpen()) {
+    <div id="mobile-nav" class="site-header__mobile">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+      }
+      <a class="kx-btn kx-btn-primary" href="#contact" (click)="closeMenu()">Start a project</a>
+    </div>
+  }
+</header>

@@ -1,0 +1,369 @@
+<main>
+  <!-- HERO -->
+  <section id="top" class="hero kx-hero-bg">
+    <div class="hero__mesh kx-mesh" aria-hidden="true"></div>
+    <div class="kx-container hero__content">
+      <div class="hero__copy">
+        <p class="kx-eyebrow hero__brand-line">
+          <img src="assets/brand/kynexa-logo-mark.png" alt="" width="28" height="28" />
+          Kynexa Technologies
+        </p>
+        <h1>From idea to intelligent software — built for the real world.</h1>
+        <p class="hero__sub">
+          End-to-end AI, SaaS, architecture, and digital growth. We turn non-technical ideas into
+          polished products clients love — worldwide.
+        </p>
+        <div class="hero__actions">
+          <a class="kx-btn kx-btn-primary" href="#contact">Talk to us</a>
+          <a class="kx-btn kx-btn-ghost" href="#portfolio">See our work</a>
+        </div>
+      </div>
+
+      <div class="hero__visual kx-float" aria-hidden="true">
+        <div class="hero__orb"></div>
+        <div class="hero__panel">
+          <span>AI document intelligence</span>
+          <strong>Match meaning. Ship faster.</strong>
+          <div class="hero__bars">
+            <i style="--w: 86%"></i>
+            <i style="--w: 64%"></i>
+            <i style="--w: 92%"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="kx-section services">
+    <div class="kx-container">
+      <div class="section-head kx-reveal">
+        <p class="kx-eyebrow">What we deliver</p>
+        <h2>Full-stack product partnership, not just tickets.</h2>
+        <p>
+          Modern buyers expect speed, clarity, and AI that actually works. We design, build, and
+          launch software with quality baked in from day one.
+        </p>
+      </div>
+
+      <div class="services__grid">
+        @for (service of services; track service.title; let i = $index) {
+          <article class="service-tile kx-reveal" [style.--d]="i * 70 + 'ms'" [style.--delay]="i * 60 + 'ms'">
+            <span class="service-tile__icon">{{ service.icon }}</span>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.copy }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK / BUSINESS MODEL -->
+  <section id="model" class="kx-section model">
+    <div class="kx-container">
+      <div class="section-head kx-reveal">
+        <p class="kx-eyebrow">How we work</p>
+        <h2>A clear delivery model from idea to growth.</h2>
+        <p>
+          Transparent phases, predictable collaboration, and engagement options that match your
+          stage — startup MVP or long-term product partnership.
+        </p>
+      </div>
+
+      <div class="model__steps">
+        @for (item of engagement; track item.step) {
+          <article class="model-step kx-reveal">
+            <span>{{ item.step }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.copy }}</p>
+          </article>
+        }
+      </div>
+
+      <div class="model__cards">
+        @for (item of businessModel; track item.title) {
+          <article class="model-card kx-reveal">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.copy }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section id="ai" class="kx-section ai-band">
+    <div class="kx-container ai-band__grid">
+      <div class="kx-reveal">
+        <p class="kx-eyebrow">AI at the core</p>
+        <h2>Intelligence inside your product — and inside our delivery.</h2>
+        <p>
+          We embed AI where it creates leverage: reading unstructured documents, finding
+          meaningful matches, and surfacing decisions humans can trust. Internally, we ship with
+          Cursor and Claude so your roadmap moves faster without sacrificing craft.
+        </p>
+        <ul class="ai-list">
+          <li>Document understanding &amp; extraction</li>
+          <li>Semantic matching across records</li>
+          <li>Assistive workflows for non-technical users</li>
+          <li>AI-accelerated engineering with human review</li>
+        </ul>
+      </div>
+      <div class="ai-card kx-reveal">
+        <div class="ai-card__pulse" aria-hidden="true"></div>
+        <h3>Productivity unlock</h3>
+        <p>
+          Same team, sharper tools — more iterations per sprint, cleaner code reviews, and
+          features that feel current for 2026 buyers.
+        </p>
+        <div class="ai-stats">
+          <div>
+            <strong>Faster</strong>
+            <span>concept → MVP</span>
+          </div>
+          <div>
+            <strong>Smarter</strong>
+            <span>data workflows</span>
+          </div>
+          <div>
+            <strong>Global</strong>
+            <span>delivery proven</span>
+          </div>
+        </div>
+        <div class="ai-card__extra">
+          <p><strong>Where AI pays off</strong></p>
+          <p>Invoices, KYC packs, bids, and support docs — extract fields, match meaning, reduce manual review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section id="technology" class="kx-section tech">
+    <div class="kx-container">
+      <div class="section-head kx-reveal">
+        <p class="kx-eyebrow">Technology stack</p>
+        <h2>Tools we use to design, build, and ship.</h2>
+        <p>
+          A modern stack for product teams — from Figma prototypes to Angular/React frontends,
+          Nest backends, and AI features that create real business leverage.
+        </p>
+      </div>
+
+      <div class="tech__grid">
+        @for (tech of technologies; track tech.name; let i = $index) {
+          <article class="tech-card kx-reveal kx-reveal--scale" [style.--tone]="tech.tone" [style.--d]="i * 45 + 'ms'">
+            <div class="tech-card__icon">
+              <img [src]="tech.icon" [alt]="tech.name + ' logo'" width="48" height="48" loading="lazy" />
+            </div>
+            <h3>{{ tech.name }}</h3>
+            <p>{{ tech.blurb }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="kx-section portfolio">
+    <div class="kx-container">
+      <div class="section-head kx-reveal">
+        <p class="kx-eyebrow">Selected work</p>
+        <h2>Products used across continents.</h2>
+        <p>Global SaaS, logistics, fundraising, and IoT platforms for real operators.</p>
+      </div>
+
+      <div class="portfolio__grid">
+        @for (item of portfolio; track item.title; let i = $index) {
+          <a class="project kx-reveal" [href]="item.href" target="_blank" rel="noopener" [style.--d]="i * 60 + 'ms'">
+            <div class="project__media">
+              <img [src]="item.image" [alt]="item.title + ' screenshot'" loading="lazy" />
+              <span class="project__view">View site</span>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>{{ item.tag }}</span>
+                <span>{{ item.region }}</span>
+              </div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+            </div>
+          </a>
+        }
+      </div>
+
+      <div class="upwork-banner kx-reveal">
+        <div>
+          <p class="kx-eyebrow">Upwork</p>
+          <h3>9k+ earnings · 100% Job Success</h3>
+          <p>2+ year client partnerships · product builds &amp; AI features</p>
+        </div>
+        <a
+          class="kx-btn kx-btn-secondary"
+          href="https://www.upwork.com/freelancers/~01cefebdb2c793933a?mp_source=share"
+          target="_blank"
+          rel="noopener"
+          >View profile</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section id="case-study" class="kx-section case">
+    <div class="kx-container case__panel kx-reveal">
+      <div class="case__copy">
+        <p class="kx-eyebrow">Case study</p>
+        <h2>Red Chilli Marketplace</h2>
+        <p>
+          An APMC-style bidding app connecting chilli powder buyers and sellers — enquiry, live
+          bids, lowest offer first, and document uploads for fulfillment.
+        </p>
+        <div class="case__tags">
+          <span>Live bidding</span>
+          <span>Select-first UI</span>
+          <span>Seller documents</span>
+        </div>
+        <div class="case__model">
+          <h3>Business model</h3>
+          <ul>
+            <li>Buyer creates enquiry → sellers place bids</li>
+            <li>Lowest bid highlighted for quick confirmation</li>
+            <li>Platform earns commission on closed deals</li>
+            <li>Built for older, non-technical market users</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case__shots">
+        <img
+          src="assets/portfolio/red-chilli-1.png"
+          alt="Red Chilli Marketplace buyer dashboard"
+          loading="lazy"
+        />
+        <img
+          src="assets/portfolio/red-chilli-2.png"
+          alt="Red Chilli Marketplace enquiry cards"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="kx-section team">
+    <div class="kx-container">
+      <div class="team__layout">
+        <div class="section-head kx-reveal">
+          <p class="kx-eyebrow">Leadership</p>
+          <h2>The people behind Kynexa.</h2>
+          <p>
+            Founder-led delivery with engineering ownership. We stay close to clients for years —
+            not just until the first release.
+          </p>
+          <ul class="team__points">
+            <li>Direct access to CEO / CTO</li>
+            <li>AI-assisted, human-reviewed builds</li>
+            <li>2+ year client relationships</li>
+          </ul>
+        </div>
+
+        <div class="team__grid">
+          @for (member of team; track member.name; let i = $index) {
+            <article class="member kx-reveal" [style.--d]="i * 90 + 'ms'">
+              <div class="member__photo">
+                <img [src]="member.image" [alt]="member.name" loading="lazy" />
+              </div>
+              <div class="member__info">
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.role }}</p>
+              </div>
+              @if (member.linkedin) {
+                <a
+                  class="member__social"
+                  [href]="member.linkedin"
+                  target="_blank"
+                  rel="noopener"
+                  [attr.aria-label]="member.name + ' on LinkedIn'"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+                    />
+                  </svg>
+                </a>
+              }
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="kx-section contact">
+    <div class="kx-container contact__grid">
+      <div class="kx-reveal">
+        <p class="kx-eyebrow">Contact</p>
+        <h2>Tell us what you want to build.</h2>
+        <p>
+          Share your idea — we’ll map architecture, AI opportunities, and a clear path to launch.
+        </p>
+
+        <div class="contact__info">
+          <p><strong>Samir Makhani</strong></p>
+          <p class="contact__phone">
+            <a href="tel:+919712652417">+91-9712652417</a>
+            <span>Same number on WhatsApp</span>
+          </p>
+          <p>
+            2-Shreeji Nagar, near Rameshwar Chowk,<br />
+            Raiya Road, Rajkot – 360 007
+          </p>
+        </div>
+      </div>
+
+      <form class="contact-form kx-reveal" (submit)="submitContact($event)" novalidate>
+        @if (!formSubmitted()) {
+          <label>
+            <span>Name</span>
+            <input class="kx-field" name="name" [(ngModel)]="contact.name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input
+              class="kx-field"
+              type="email"
+              name="email"
+              [(ngModel)]="contact.email"
+              required
+            />
+          </label>
+          <label>
+            <span>Company</span>
+            <input class="kx-field" name="company" [(ngModel)]="contact.company" />
+          </label>
+          <label>
+            <span>How can we help?</span>
+            <textarea
+              class="kx-field"
+              name="message"
+              rows="4"
+              [(ngModel)]="contact.message"
+              required
+            ></textarea>
+          </label>
+          <button class="kx-btn kx-btn-primary" type="submit">Send message</button>
+        } @else {
+          <div class="contact-form__success">
+            <h3>Thanks — message captured locally.</h3>
+            <p>
+              Backend wiring comes next. Meanwhile, reach Samir on
+              <a href="tel:+919712652417">+91-9712652417</a> (WhatsApp too).
+            </p>
+          </div>
+        }
+      </form>
+    </div>
+  </section>
+</main>

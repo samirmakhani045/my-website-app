@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none" role="img" aria-label="Kynexa Technologies">
+  <rect x="0" y="4" width="40" height="40" rx="10" fill="#0F766E"/>
+  <path d="M11 12h7.2l8.2 10.2h.2L34.8 12H42l-11.4 13.4L42.4 40h-7.4l-8.6-10.8h-.2L17.8 40H11l11.6-13.5L11 12z" fill="#ECFDF8"/>
+  <path d="M29 21.5l4.2-5 7.8 9.4-4.1 4.9-7.9-9.3z" fill="#5EEAD4"/>
+  <text x="52" y="31" font-family="Outfit, Plus Jakarta Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#0B1F2A" letter-spacing="-0.4">Kynexa</text>
+</svg>
